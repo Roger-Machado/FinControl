@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e909d73ff87167e893bd2eeb4bede0a9b02649c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44f0f8876613608643e0713de8c33750d14463d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

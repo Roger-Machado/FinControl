@@ -18,7 +18,6 @@ C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\FinContr
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\scopedcss\bundle\FinControl.styles.css
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\scopedcss\projectbundle\FinControl.bundle.scp.css
-C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\compressed\a2iywpl0cd-b9sayid5wm.gz
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\compressed\73osbuk73u-61n19gt1b8.gz
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\compressed\i536amhfdc-xtxxf3hu2r.gz
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\compressed\e8fvo7k2hh-bqjiyaj88i.gz
@@ -96,3 +95,4 @@ C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\refint\F
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\FinControl.pdb
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\FinControl.genruntimeconfig.cache
 C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\ref\FinControl.dll
+C:\Users\Luiz-PC\OneDrive\Área de Trabalho\FinControl\obj\Debug\net9.0\compressed\a2iywpl0cd-8y6djg9sdc.gz
