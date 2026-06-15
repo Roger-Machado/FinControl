@@ -1,6 +1,6 @@
 namespace FinControl.Models
 {
-    public class Despesa
+    public class Receita
     {
         public int Id { get; set; }
 
@@ -8,10 +8,8 @@ namespace FinControl.Models
 
         public decimal Valor { get; set; }
 
-        public DateTime DataVencimento { get; set; }
+        public DateTime DataRecebimento { get; set; }
 
         public string Categoria { get; set; } = string.Empty;
-
-        public bool Pago { get; set; }
     }
 }
