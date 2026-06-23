@@ -8,29 +8,29 @@
 
 <hr />
 
-<form>
+<form asp-action="Create" method="post">
 
     <div class="mb-3">
-        <label class="form-label">Descrição</label>
-        <input class="form-control" />
+        <label asp-for="Descricao" class="form-label"></label>
+        <input asp-for="Descricao" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Valor</label>
-        <input class="form-control" />
+        <label asp-for="Valor" class="form-label"></label>
+        <input asp-for="Valor" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Data Recebimento</label>
-        <input type="date" class="form-control" />
+        <label asp-for="DataRecebimento" class="form-label"></label>
+        <input asp-for="DataRecebimento" type="date" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Categoria</label>
-        <input class="form-control" />
+        <label asp-for="Categoria" class="form-label"></label>
+        <input asp-for="Categoria" class="form-control" />
     </div>
 
-    <button class="btn btn-success">
+    <button type="submit" class="btn btn-success">
         Salvar
     </button>
 

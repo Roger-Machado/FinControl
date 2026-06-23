@@ -1,3 +1,5 @@
+@model IEnumerable<FinControl.Models.Receita>
+
 @{
     ViewData["Title"] = "Receitas";
 }
@@ -23,12 +25,17 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>Salário</td>
-                <td>R$ 3.500,00</td>
-                <td>15/06/2026</td>
-                <td>Trabalho</td>
-            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Descricao</td>
+                    <td>R$ @item.Valor</td>
+                    <td>@item.DataRecebimento.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Categoria</td>
+                </tr>
+            }
+
         </tbody>
 
     </table>
