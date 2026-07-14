@@ -1,0 +1,47 @@
+@model FinControl.Models.Receita
+
+@{
+    ViewData["Title"] = "Editar Receita";
+}
+
+<div class="container mt-4">
+
+    <h1>✏️ Editar Receita</h1>
+
+    <hr />
+
+    <form asp-action="Edit">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Descricao" class="form-label"></label>
+            <input asp-for="Descricao" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Valor" class="form-label"></label>
+            <input asp-for="Valor" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DataRecebimento" class="form-label"></label>
+            <input asp-for="DataRecebimento" type="date" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Categoria" class="form-label"></label>
+            <input asp-for="Categoria" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Salvar Alterações
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+
+    </form>
+
+</div>
