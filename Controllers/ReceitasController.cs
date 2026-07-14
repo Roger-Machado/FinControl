@@ -61,5 +61,33 @@ namespace FinControl.Controllers
 
             return View(receita);
         }
+
+        // MÉTODO PARA EXIBIR A TELA DE CONFIRMAÇÃO
+        public IActionResult Delete(int id)
+        {
+            var receita = _context.Receitas.Find(id);
+
+            if (receita == null)
+            {
+                return NotFound();
+            }
+
+            return View(receita);
+        }
+
+        // MÉTODO PARA EXCLUIR DO BANCO
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var receita = _context.Receitas.Find(id);
+
+            if (receita != null)
+            {
+                _context.Receitas.Remove(receita);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

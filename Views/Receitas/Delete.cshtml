@@ -1,0 +1,65 @@
+@model FinControl.Models.Receita
+
+@{
+    ViewData["Title"] = "Excluir Receita";
+}
+
+<div class="container mt-4">
+
+    <h2 class="text-danger">🗑 Excluir Receita</h2>
+
+    <hr />
+
+    <h5>Tem certeza que deseja excluir esta receita?</h5>
+
+    <dl class="row mt-4">
+
+        <dt class="col-sm-3">
+            Descrição
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Descricao
+        </dd>
+
+        <dt class="col-sm-3">
+            Valor
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Valor.ToString("C")
+        </dd>
+
+        <dt class="col-sm-3">
+            Data
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.DataRecebimento.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt class="col-sm-3">
+            Categoria
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Categoria
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete">
+
+        <input asp-for="Id" type="hidden" />
+
+        <button class="btn btn-danger">
+            🗑 Confirmar Exclusão
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+
+    </form>
+
+</div>
