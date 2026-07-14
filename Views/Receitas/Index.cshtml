@@ -1,4 +1,5 @@
 @model IEnumerable<FinControl.Models.Receita>
+@using System.Globalization
 
 @{
     ViewData["Title"] = "Receitas";
@@ -30,7 +31,9 @@
             {
                 <tr>
                     <td>@item.Descricao</td>
-                    <td>R$ @item.Valor</td>
+                    <td>
+                        @item.Valor.ToString("C2", new CultureInfo("pt-BR"))
+                    </td>
                     <td>@item.DataRecebimento.ToString("dd/MM/yyyy")</td>
                     <td>@item.Categoria</td>
                 </tr>

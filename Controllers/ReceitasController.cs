@@ -33,5 +33,33 @@ namespace FinControl.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        // MÉTODO PARA ABRIR A TELA DE EDIÇÃO
+        public IActionResult Edit(int id)
+        {
+            var receita = _context.Receitas.Find(id);
+
+            if (receita == null)
+            {
+                return NotFound();
+            }
+
+            return View(receita);
+        }
+
+        // MÉTODO PARA SALVAR A EDIÇÃO
+        [HttpPost]
+        public IActionResult Edit(Receita receita)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Receitas.Update(receita);
+                _context.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(receita);
+        }
     }
 }
