@@ -10,24 +10,30 @@
 
 <form asp-action="Create" method="post">
 
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
     <div class="mb-3">
         <label asp-for="Descricao" class="form-label"></label>
         <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="Valor" class="form-label"></label>
-        <input asp-for="Valor" class="form-control" />
+        <input asp-for="Valor" type="number" step="0.01" min="0.01" class="form-control" />
+        <span asp-validation-for="Valor" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="DataRecebimento" class="form-label"></label>
         <input asp-for="DataRecebimento" type="date" class="form-control" />
+        <span asp-validation-for="DataRecebimento" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="Categoria" class="form-label"></label>
         <input asp-for="Categoria" class="form-control" />
+        <span asp-validation-for="Categoria" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-success">
@@ -39,3 +45,9 @@
     </a>
 
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

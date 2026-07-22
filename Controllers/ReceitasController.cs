@@ -28,12 +28,25 @@ namespace FinControl.Controllers
         [HttpPost]
         public IActionResult Create(Receita receita)
         {
+            Console.WriteLine($"Valor recebido: '{receita.Valor}'");
+
+            if (receita.Valor <= 0)
+            {
+                ModelState.AddModelError(nameof(receita.Valor), "O valor deve ser maior que zero.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(receita);
+            }
+
             _context.Receitas.Add(receita);
             _context.SaveChanges();
 
+            TempData["Sucesso"] = "Receita cadastrada com sucesso!";
+
             return RedirectToAction(nameof(Index));
         }
-
         // MÉTODO PARA ABRIR A TELA DE EDIÇÃO
         public IActionResult Edit(int id)
         {
@@ -51,15 +64,22 @@ namespace FinControl.Controllers
         [HttpPost]
         public IActionResult Edit(Receita receita)
         {
-            if (ModelState.IsValid)
+            if (receita.Valor <= 0)
             {
-                _context.Receitas.Update(receita);
-                _context.SaveChanges();
-
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError(nameof(receita.Valor), "O valor deve ser maior que zero.");
             }
 
-            return View(receita);
+            if (!ModelState.IsValid)
+            {
+                return View(receita);
+            }
+
+            _context.Receitas.Update(receita);
+            _context.SaveChanges();
+
+            TempData["Sucesso"] = "Receita atualizada com sucesso!";
+
+            return RedirectToAction(nameof(Index));
         }
 
         // MÉTODO PARA EXIBIR A TELA DE CONFIRMAÇÃO
@@ -85,6 +105,8 @@ namespace FinControl.Controllers
             {
                 _context.Receitas.Remove(receita);
                 _context.SaveChanges();
+
+                TempData["Sucesso"] = "Receita excluída com sucesso!";
             }
 
             return RedirectToAction(nameof(Index));
