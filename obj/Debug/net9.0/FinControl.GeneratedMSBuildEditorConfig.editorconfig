@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzcGVzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Luiz-PC/OneDrive/Área de Trabalho/FinControl/Views/Despesas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzcGVzYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luiz-PC/OneDrive/Área de Trabalho/FinControl/Views/Despesas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzcGVzYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Luiz-PC/OneDrive/Área de Trabalho/FinControl/Views/Despesas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzcGVzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
