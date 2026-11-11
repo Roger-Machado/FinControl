@@ -1,4 +1,6 @@
-﻿@{
+﻿@using System.Globalization
+
+@{
     ViewData["Title"] = "Dashboard";
 }
 
@@ -17,7 +19,9 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h5>Saldo Atual</h5>
-                    <h3 class="text-success">R$ 0,00</h3>
+                    <h3 class="text-success">
+                        @(((decimal)ViewBag.SaldoAtual).ToString("C2", new CultureInfo("pt-BR")))
+                    </h3>
                 </div>
             </div>
         </div>
@@ -26,8 +30,9 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h5>Receitas</h5>
-                    <h3 class="text-primary">R$ 0,00</h3>       
-                </div>
+                    <h3 class="text-primary">
+                        @(((decimal)ViewBag.TotalReceitas).ToString("C2", new CultureInfo("pt-BR")))
+                    </h3>       
             </div>
         </div>
 
@@ -35,7 +40,9 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h5>Despesas</h5>
-                    <h3 class="text-danger">R$ 0,00</h3>
+                    <h3 class="text-danger">
+                        @(((decimal)ViewBag.TotalDespesas).ToString("C2", new CultureInfo("pt-BR")))
+                    </h3>
                 </div>
             </div>
         </div>
